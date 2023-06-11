@@ -13,16 +13,36 @@
         <p>The button above has been clicked {{ counter }} times.</p>
     </div>
     <br>
+    
+    <!-- Method Event Handlers / button alert -->
+    <div id="alert">
+        <button v-on:click="alertbtn">Button alert</button>
+    </div>
 
 </body>
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script>
+// DOM Events / Membuat perintah saat klik +1
 var example1 = new Vue({
   el: '#listening-events',
   data: {
     counter: 0
   }
 })
+
+// Method Event Handlers / button alert
+var example2 = new Vue({
+  el: '#alert',
+  data: {
+    name: 'Vue.js'
+  },
+  methods: {
+    alertbtn: function (event) {
+      alert('Hello ' + this.name + '!')
+    }
+  }
+})
+
 </script>
