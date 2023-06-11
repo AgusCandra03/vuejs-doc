@@ -18,6 +18,13 @@
     <div id="alert">
         <button v-on:click="alertbtn">Button alert</button>
     </div>
+    <br>
+
+    <!-- Methode in inline handlers / button alert with message -->
+    <div id="example-3">
+        <button v-on:click="say('hi')">Say hi</button>
+        <button v-on:click="say('what')">Say what</button>
+    </div>
 
 </body>
 </html>
@@ -41,6 +48,16 @@ var example2 = new Vue({
   methods: {
     alertbtn: function (event) {
       alert('Hello ' + this.name + '!')
+    }
+  }
+})
+
+// Methode in inline handlers / button alert with message
+new Vue({
+  el: '#example-3',
+  methods: {
+    say: function (message) {
+      alert(message)
     }
   }
 })
