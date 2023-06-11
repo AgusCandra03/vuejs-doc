@@ -7,18 +7,58 @@
     <title>Vue JS Documentation</title>
 </head>
 <body>
+    <!-- Menampilkan variabel / message id -->
     <div id="app">
         {{ message }}
     </div>
+    <br>
+
+    <!-- Menampilkan pengkondisian if-else dengan value -->
+    <div id="pengkondisian" v-if="status == 'tampilkan'">
+        {{ message }}
+    </div>
+    <br>
+
+    <!-- Menampilkan pengkondisian if-else dengan nilai true false -->
+    <div id="pengkondisian-truefalse" v-if="status">
+        {{ message }}
+    </div>
+    <br>
+
+    
 </body>
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script>
+// Menampilkan variabel / message id
+
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue JS!'
+    message: 'Show Variable'
   }
 })
+
+// Menampilkan Pengkondisian if-else dengan value
+
+var app = new Vue({
+  el: '#pengkondisian',
+  data: {
+    message: 'If-Else with Value',
+    status: 'tampilkan'
+  }
+})
+
+// Menampilkan Pengkondisian if-else dengan nilai true false
+
+var app = new Vue({
+  el: '#pengkondisian-truefalse',
+  data: {
+    message: 'If-Else True/False',
+    status: true
+  }
+})
+
+
 </script>
