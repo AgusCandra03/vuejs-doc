@@ -25,6 +25,15 @@
     </div>
     <br>
 
+    <!-- Menampilkan Looping -->
+    <div id="looping">
+        <label v-for="user in users">
+            Nama : {{ user.name }} ||
+            Umur : {{ user.age }} Tahun
+            <br>
+        </label>
+    </div>
+    <br>
     
 </body>
 </html>
@@ -60,5 +69,25 @@ var app = new Vue({
   }
 })
 
+// Menampilkan Looping
+var app = new Vue({
+  el: '#looping',
+  data: {
+    users: [
+        {
+            name : 'Agus',
+            age : '21'
+        },
+        {
+            name : 'Candra',
+            age : '22'
+        },
+        {
+            name : 'S.Kom',
+            age : '23'
+        }
+    ]
+  }
+})
 
 </script>
